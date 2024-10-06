@@ -1,0 +1,28 @@
+# Maven build directory
+/target/
+
+# Gradle build directory
+/build/
+
+# Ignore logs
+*.log
+
+# Ignore compiled Java class files
+**/*.class
+
+# Ignore IntelliJ IDEA and Eclipse files
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore node_modules in case there are any frontend projects
+node_modules/
+
+# Ignore environment files
+*.env
