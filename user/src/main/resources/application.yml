@@ -1,0 +1,15 @@
+server:
+  port: ${SERVER_PORT:18091}
+
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    registry-fetch-interval-seconds: 3
+    serviceUrl:
+      defaultZone: '${DISCOVERY_SERVER_URI:http://localhost:8761/eureka}'
+
+spring:
+  datasource:
+    url:jdbc:postgresql://localhost:5432/medicare
+
