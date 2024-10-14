@@ -10,6 +10,20 @@ eureka:
       defaultZone: '${DISCOVERY_SERVER_URI:http://localhost:8761/eureka}'
 
 spring:
+  application:
+    name: user-service
+  autoconfigure:
+    exclude:
+      - org.springframework.ai.autoconfigure.retry.SpringAiRetryAutoConfiguration
   datasource:
-    url:jdbc:postgresql://localhost:5432/medicare
+    url: jdbc:postgresql://localhost:5432/medicare  # Ensure there's a space after the colon
+    username: postgres                       # Replace with your PostgreSQL username
+    password: postgres                         # Replace with your PostgreSQL password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update   # Optional: Configures how Hibernate interacts with the DB schema (e.g., create, update, validate)
+
+
+
 
